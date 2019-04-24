@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<div>
+    {% if ResultList %}
+        {% for result in ResultList %}
+            <p>{{ forloop.counter }}. {{ result }}</p>
+            {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<form action="/result/" method="POST" style ='float: left; '>
+    {% csrf_token %}
+    <input type="text" name="sentence" style="width: 300px;">
+    <input type="submit" value="Submit">
+</form>
+
+<form action="/reset/" method="POST" style ='float: left; '>
+    <input type="submit" value="Clear">
+</form>
+
+<div style="min-height: 2px; margin:2em">
+</div>
+
+{% if ResultList %}
+    {% for result in ResultList %}
+        <p>{{ forloop.counter }}. {{ result }}</p>
+        {% endfor %}
+{% endif %}
+
+{% endblock %}
+

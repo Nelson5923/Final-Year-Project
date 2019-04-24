@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="A Cantonese Spam Detector using Deep Neural Networks.">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width">
+    <link href="{% static 'FastCan/normalize.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'FastCan/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'FastCan/mobile.css' %}" rel="stylesheet" type="text/css" media="screen and (max-width: 768px) and (min-width: 0px)">
+    <title>FastCan - a Cantonese Spam Detector with FastText</title>
+</head>
+
+  <body>
+
+    <div class="all-page">
+
+      <h1 class="main-title">FASTCAN - FastText + Cantonese</h1>
+
+      <div style="width: 90%;"> </div>
+
+      <div class="choose-lang"> </div>
+
+      <p>A Cantonese Spam Detector using Deep Neural Networks.</p>
+
+      <p class="margin1 link-box">
+
+        <a href="https://github.com/Nelson5923/Final-Year-Project" class="blue-link" target="_blank">
+          Go to GitHub
+        </a>
+        |
+        <a href="/user/" class="blue-link" >
+          Show Malicious User
+        </a>
+        |
+        <a href="/home/" class="blue-link">
+          Back to Home
+        </a>
+
+      </p>
+
+      {% block content %}{% endblock %}
+
+      <div style="min-height: 300px; margin:2em">
+        <div style="margin-right: 2em; float:left">
+        </div>
+        <div style="float:left">
+        </div>
+        <div style="clear:both"></div>
+      </div>
+
+    </div>
+
+     <div class="bottom-hint">
+        <div>The Chinese University of Hong Kong - FYP</div>
+      </div>
+
+  </body>
+
+</html>
+
